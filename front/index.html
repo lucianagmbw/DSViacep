@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto via CEP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+   <header class="nav-container">
+       <nav class="nav-main">
+           <h1>DSViaCEP</h1>
+           <div class="contact-link">contato</div>
+       </nav>
+   </header>
+   <main>
+       <section id="form-section" class="form-container">
+           <div class="card-form">
+               <form name="newAddress">
+               <div class="form-control">
+                   <label for="cep">cep</label>
+                  
+                   <input 
+                        name="cep" 
+                        id="cep" 
+                        type="text"
+                        class="form-input"
+                        placeholder="CEP"> 
+                        <div class="error-message">campo requerido</div>
+               </div>
+
+               <div  class="form-control">
+                <label for="street">logradouro</label>
+                <input 
+                     name="street" 
+                     id="street" 
+                     type="text"
+                     class="form-input"
+                     placeholder="LOGRADOURO"
+                     disabled> 
+               </div>
+
+               <div  class="form-control">
+                <label for="number">numero</label>
+                <input 
+                     name="number" 
+                     id="number" 
+                     type="text"
+                     class="form-input"
+                     placeholder="NÚMERO"> 
+                     <div class="error-message">campo requerido</div>
+                </div>
+
+                <div  class="form-control">
+                    <label for="city">cidade</label>
+                    <input 
+                         name="city" 
+                         id="city" 
+                         type="text"
+                         class="form-input"
+                         placeholder="CIDADE"
+                         disabled> 
+                </div>
+
+                <div  class="form-control">
+                    <button type="submit">Salvar</button>
+                    <button>Limpar</button>
+                </div>
+            </form>
+           </div>
+       </section>
+
+       <section id="list-section">
+        <div>
+            <h3>São Paulo</h3>
+            <p>Rua dos Jardins,720</p>
+            <p>25525-720</p>
+        </div>
+        <div>
+            <h3>São Paulo</h3>
+            <p>Rua dos Jardins,720</p>
+            <p>25525-720</p>
+        </div>
+       </section>
+   </main>
+</body>
+</html>
