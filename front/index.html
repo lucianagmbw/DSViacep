@@ -31,7 +31,7 @@
                         type="text"
                         class="form-input"
                         placeholder="CEP"> 
-                        <div class="error-message">campo requerido</div>
+                        <div class="error-message" data-error="cep">campo requerido</div>
                </div>
 
                <div  class="form-control">
@@ -53,7 +53,7 @@
                      type="text"
                      class="form-input"
                      placeholder="NÚMERO"> 
-                     <div class="error-message">campo requerido</div>
+                     <div class="error-message" data-error="number">campo requerido</div>
                 </div>
 
                 <div  class="form-control">
@@ -68,8 +68,8 @@
                 </div>
 
                 <div  class="btn-container">
-                    <button class="btn btn-left" type="submit">Salvar</button>
-                    <button class="btn btn-right">Limpar</button>
+                    <button name = "btnSave" class="btn btn-left" type="submit">Salvar</button>
+                    <button name = "btnClear" class="btn btn-right">Limpar</button>
                 </div>
             </form>
            </div>
