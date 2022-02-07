@@ -32,7 +32,38 @@ export function init(){
     state.errorCep = document.querySelector('[data-error="cep"]');
     state.errorNumber = document.querySelector('[data-error = "number"]');
 
-    console.log (state);
+   //setFormerror("cep" , "Digite o cep");
+   //setFormerror("number","Digite o número");
+   state.inputNumber.addEventListener('change' , handleInputNumberChange);
+   state.btnClear.addEventListener('click',handleBtnClearClick);
+}
 
+function handleInputNumberChange(event){
+    if (event.target.value == ""){
+        setFormerror("number" , "Campo requerido");
+    }else{
+        setFormerror("number" , "");
+    }
+}
 
+function handleBtnClearClick(event){
+    event.preventDefault ();
+    clearForm();
+}
+
+function clearForm(){
+    state.inputCep.value = "";
+    state.inputCity.value = "";
+    state.inputNumber.value ="";
+    state.inputStreet.value = "";
+
+    setFormerror("cep" , "");
+    setFormerror("number" , "");
+
+    state.inputCep.focus();
+}
+
+function setFormrror(key,value){
+    const element = document.querySelector(`[data-error= "${key}"]`);
+    element.innerHTML = value;
 }
